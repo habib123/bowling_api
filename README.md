@@ -14,6 +14,6 @@
 
 8. Route with versioning and default JOSN response
 
-9. Routing error handler
+9. Routing and action error handler
 
-10. Action error  handler
+10. Automatic request to get score update every 2 seconds
