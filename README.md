@@ -1,4 +1,4 @@
-1. Api developed with TDD
+1. Api developed with TDD(Many tests - controller and model)
 
 2. model schema test using JSON validator
 
