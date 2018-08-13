@@ -17,3 +17,7 @@
 9. Routing and action error handler
 
 10. Automatic request to get score update every 2 seconds
+
+11. Recod caching 
+
+12. Database transcation(rollback) and locking resources in case of multi thread access the same resource 
