@@ -12,6 +12,7 @@ var Body = React.createClass({
     }
   },
 
+
   startGame(){
     $.ajax({
         url: 'api/bowlings',
@@ -33,6 +34,14 @@ var Body = React.createClass({
     this.setState({ notification: '' });
   },
 
+  componentDidMount() {
+    this.intervalID = setInterval(() => this.updatedDetails(), 2000);
+  },
+
+  componentWillUnmount() {
+    clearInterval(this.intervalID);
+  },
+  
   updateScore(score){
     $.ajax({
         url: 'api/bowlings/'+this.state.details.id,
