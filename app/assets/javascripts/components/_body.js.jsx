@@ -19,6 +19,7 @@ var Body = React.createClass({
         type: 'POST',
         success:(data) =>{
           this.resetState(data.id);
+          this.startInter();
         }
      });
   },
@@ -34,14 +35,14 @@ var Body = React.createClass({
     this.setState({ notification: '' });
   },
 
-  componentDidMount() {
+  startInter() {
     this.intervalID = setInterval(() => this.updatedDetails(), 2000);
   },
 
   componentWillUnmount() {
     clearInterval(this.intervalID);
   },
-  
+
   updateScore(score){
     $.ajax({
         url: 'api/bowlings/'+this.state.details.id,
@@ -63,7 +64,6 @@ var Body = React.createClass({
       type: 'GET',
       success: (data) =>{
         this.setState({ details: data });
-        this.clearError();
       },
       error: (response)=>{
         this.setError(request);
