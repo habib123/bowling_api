@@ -1,0 +1,10 @@
+item:
+  type: Object
+  required:
+    - score
+    - frames
+  properties:
+    score:
+      type: integer
+    frames:
+      type: string
